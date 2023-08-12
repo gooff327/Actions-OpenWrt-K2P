@@ -42,12 +42,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
-   - name: Initialization environment
+    - name: Initialization environment
       env:
-        DEBIAN_FRONTEND: noninteractive
+          DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+          sudo mkdir -p /workdir
+          sudo chown $USER:$GROUPS /workdir
 
     - name: Clone source code
       working-directory: /workdir
